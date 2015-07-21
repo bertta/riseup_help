@@ -1,0 +1,83 @@
+@title = 'Thunderbird'
+
+h2. Qué es Thunderbird?
+
+!>img/reclaimyourinbox.png!
+
+Thunderbird es el cliente de correo electrónico recomendado por riseup.net Es software libre y esta disponible para Linux, Windows, y Mac OS X. Puedes descargar Thunderbird "del sitio de Thunderbird":https://www.mozilla.org/thunderbird/. En tanto software libre, Thunderbird es parte de Digital Commons, una especie de tesoro común a todos. Por el contrario, Outlook es una de las herramientas de Microsoft para dominar el mundo.
+
+Thunderbird tiene muchas funcionalidades, incluyendo: soporte IMAP y POP, múltiples cuentas, búsqueda rápida, control ortográfico, controles avanzados de spam, RSS, vistas de carpetas virtuales, filtros de mensajes, lista de direcciones, y soporte para encriptado OpenPGP.
+
+h2. Configuración de Thunderbird
+
+h3.  Inicia el "Asistente de Cuentas"
+
+La primera vez que ejecutes Thunderbird, el asistente de cuentas te guiará a través de la configuración de una cuenta. Si el asistente no se abre, puedes hacer esto:
+
+1. Selecciona el la opción del menú *Editar > Configuración de Cuentas...*
+
+!img/edit-account-settings.png!
+
+2. Clickea en el botón *Agregar Cuenta...*
+
+!img/account-actions.png!
+
+h3. Paso 1
+
+Verás un aviso. Ingresa tu nombre, correco electrónico y password.
+
+!img/mail-account-setup1.png!
+
+Clickea en *Continuar*.
+
+h3. Paso 2
+
+Thunderbird bajará la configuración del servidor de riseup.
+
+!img/mail-account-setup2.png!
+
+Ahora deberás decidir si quieres usar [[IMAP o POP => email/clients/#elige-imap-o-pop]].
+
+* *IMAP*: Por defecto, se elegirá IMAP, por lo tanto si quieres IMAP simplemente clickea *Continuar*.
+* *POP*: Para cambiar a POP, clickea *editar*. Luego clickea el menú desplegable que dice IMAP y cambialo a POP. Ahora clickea Verificar Configuración. Debería mostrarte que POP esta en uso. Si es así, clickea *Continuar*.
+
+!img/imap-pop.png!
+
+h3. Paso 3
+
+Si no funciona, debes haber ingresado incorrectamente el nombre de usuario o la contraseña. Clickea Cancelar e intenta de nuevo. En otro caso....
+
+h3. Estás listo!
+
+Ahora debería chequear tus mails automáticamente y luego cada algunos minutos. Disfruta usando thunderbird!
+
+h2. Qué sigue?
+
+h3. Refuerza la seguridad de tu correo electrónico.
+
+# Idealmente, *no* deberías usar StartTLS. En cambio, es mucho mejor usar TLS. Para seguridad adicional, ve a la configuración de tu cuenta y cambia el tipo de conexión de StartTLS a TLS.
+# Hay muchas vulnerabilidades en el funcionamiento de las conexiones seguras. Si necesitas alta seguridad, deberías conectarte siempre a RIseup utilizando [[Riseup VPN => vpn]]. Esto prevendrá una larga lista de potenciales ataques a tu comunicación.
+# Para [[mensajería segura=> message-security]] reforzada, considera [[configurar Enigmail con Thunderbird => /security/message-security/encrypted-email/enigmail]] para obtener funcionalidades [[OpenPGP => /security/gpg-keys]].
+
+h3. Agrega algunas extensiones
+
+Nosotros sugerimos estas extensiones para Thunderbird:
+
+* "Display Quota":https://addons.mozilla.org/thunderbird/addon/881: Esta extensión te mostrará el estado actual de tu Quota IMAP en la barra de estado de Thunderbird y te advertirá cuando estes alcanzando un límite prestablecido.
+* [[Enigmail => /security/message-security/encrypted-email/enigmail]]: comienza ya a encriptar y desencriptar mails y verificar que los mails que recibes son de las personas que esperas que sean.
+
+h3. Opciones ocultas que mejoran radicalmente la velocidad de Thunderbird
+
+Por defecto, Thunderbird se comunica con el servidor de correo cada vez que abres un email o cambias su estado. Esto puede tornarse realmente lento con una conexión lenta a red o si el servidor de Riseup se encuentra ocupado.
+
+Por suerte, puedes hacer algo al respecto! Thunderbird tiene algunas configuraciones ocultas para sincronizarse completamente con el servidor cuando se conecta. Generalmente con esto conseguirás una experiencia mucho mas ágil y placentera.
+
+Para configurar estas opciones, ve al menú *Editar* > item *Preferencias* > pestaña *Avanzado* > botón *Editor de configuración*.
+
+* use_status_for_biff: configura esto a *false*
+* mail.server.default.autosync_offline_stores: configura esto a *true*
+
+h3. Considera borrar automáticamente los correos viejos
+
+Realmente quieres conservar todos esos mails? Puedes configurar thunderbird para borrar automaticamente los correos viejos. Para hacer esto, navega hasta Configuración de Cuentas --> Carpetas Locales --> Espacio en Disco. Puedes configurar Thunderbird para borrar mensajes X días después de haberlos recibido.
+
